@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>OpenBoard</title>
+</head>
+
+<body>
+    <div class="tool-content">
+        <div class="tools">
+            <div class="tool" id="pencil">
+                <img src="/img/pencil.png" alt="">
+                <div class="pencil-advance hidden">
+                    <div class="stroke-size">
+                        <input type="range" class="pencil-range" min="1" max="30" value="1" id="slider">
+                    </div>
+                    <div class="colors">
+                        <div class="clr black"></div>
+                        <div class="clr red"></div>
+                        <div class="clr blue"></div>
+                        <div class="clr yellow"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="tool" id="eraser">
+                <img src="/img/eraser.png" alt="">
+                <div class="eraser-advance pencil-advance hidden">
+                    <div class="stroke-size">
+                        <input type="range" class="eraser-range" min="1" max="30" value="1" id="slider">
+                    </div>
+                </div>
+            </div>
+            <div class="tool" id="highlighter"> <img src="/img/highlighter.png" alt=""></div>
+            <div class="tool" id="undo"> <img src="/img/undo.png" alt=""></div>
+            <div class="tool" id="redo"> <img src="/img/redo.png" alt=""></div>
+            <div class="tool" id="sticky"> <img src="/img/sticky.png" alt=""></div>
+            <div class="tool" id="zoomin"> <img src="/img/zoomin.png" alt=""></div>
+            <div class="tool" id="zoomout"> <img src="/img/zoomout.png" alt=""></div>
+            <div class="tool" id="gallery"> <img src="/img/gallery.png" alt=""></div>
+            <div class="tool" id="download"> <img src="/img/download.png" alt=""></div>
+        </div>
+
+    </div>
+    <div class="whiteboard">
+        <canvas id="canvas">
+
+        </canvas>
+    </div>
+    <script src="script.js"></script>
+    <script src="tools.js"></script>
+    <script src="undoredo.js"></script>
+</body>
+
+</html>
