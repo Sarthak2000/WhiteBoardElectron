@@ -15,7 +15,7 @@ function createWindow () {
       }
     })
   
-    mainwindow.loadFile('Website/index.html').then(function(){
+    mainwindow.loadFile('docs/index.html').then(function(){
         mainwindow.maximize();
         mainwindow.webContents.openDevTools;
     })

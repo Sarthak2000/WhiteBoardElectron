@@ -16,8 +16,8 @@ canvas.addEventListener("resize", (e) => {
 let ismousedown = false;
 let ctx = canvas.getContext('2d');
 ctx.lineCap = "round";
+
 // for undo i need to save all mouse events in a db
-console.log(ctx.globalCompositeOperation);
 let db = [];
 let lineevent = [];
 let toredo = [];
@@ -26,6 +26,7 @@ let highlighteffect = false;
 canvas.addEventListener("click", (e) => {
     canvas.addEventListener("mousedown", function (e) {
         toredo = []; // I cannot redo more lines after a new line is drawn
+        document.querySelector("#redo").classList.add("opacity");
         ismousedown = true;
         if (activetool == "highlighter") {
             highlighteffect = true;
@@ -70,6 +71,8 @@ canvas.addEventListener("click", (e) => {
         if (ismousedown) {
             ismousedown = false;
             db.push(lineevent);
+            // activate undo
+            document.querySelector("#undo").classList.remove("opacity");
             lineevent = [];
             if (activetool == "highlighter") {
                 highlighteffect = false;
