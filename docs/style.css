@@ -5,7 +5,6 @@
 }
 
 .tool-content {
-    /* background-color: red; */
     height: 60px;
     display: flex;
     align-items: center;
@@ -117,4 +116,11 @@ canvas {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.active-class {
+    background: lightskyblue;
+    border-radius: 32%;
+    height: 85%;
+    width: 5.5%;
 }
